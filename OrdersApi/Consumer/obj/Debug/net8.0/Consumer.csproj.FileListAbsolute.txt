@@ -1,0 +1,13 @@
+C:\Users\WendyNkosi\OneDrive - OZOW Secure Payment\Desktop\WORK-REPOS\pact-net\samples\ordersapi\Consumer\bin\Debug\net8.0\Consumer.deps.json
+C:\Users\WendyNkosi\OneDrive - OZOW Secure Payment\Desktop\WORK-REPOS\pact-net\samples\ordersapi\Consumer\bin\Debug\net8.0\Consumer.dll
+C:\Users\WendyNkosi\OneDrive - OZOW Secure Payment\Desktop\WORK-REPOS\pact-net\samples\ordersapi\Consumer\bin\Debug\net8.0\Consumer.pdb
+C:\Users\WendyNkosi\OneDrive - OZOW Secure Payment\Desktop\WORK-REPOS\pact-net\samples\ordersapi\Consumer\obj\Debug\net8.0\Consumer.csproj.AssemblyReference.cache
+C:\Users\WendyNkosi\OneDrive - OZOW Secure Payment\Desktop\WORK-REPOS\pact-net\samples\ordersapi\Consumer\obj\Debug\net8.0\Consumer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\WendyNkosi\OneDrive - OZOW Secure Payment\Desktop\WORK-REPOS\pact-net\samples\ordersapi\Consumer\obj\Debug\net8.0\Consumer.AssemblyInfoInputs.cache
+C:\Users\WendyNkosi\OneDrive - OZOW Secure Payment\Desktop\WORK-REPOS\pact-net\samples\ordersapi\Consumer\obj\Debug\net8.0\Consumer.AssemblyInfo.cs
+C:\Users\WendyNkosi\OneDrive - OZOW Secure Payment\Desktop\WORK-REPOS\pact-net\samples\ordersapi\Consumer\obj\Debug\net8.0\Consumer.csproj.CoreCompileInputs.cache
+C:\Users\WendyNkosi\OneDrive - OZOW Secure Payment\Desktop\WORK-REPOS\pact-net\samples\ordersapi\Consumer\obj\Debug\net8.0\Consumer.sourcelink.json
+C:\Users\WendyNkosi\OneDrive - OZOW Secure Payment\Desktop\WORK-REPOS\pact-net\samples\ordersapi\Consumer\obj\Debug\net8.0\Consumer.dll
+C:\Users\WendyNkosi\OneDrive - OZOW Secure Payment\Desktop\WORK-REPOS\pact-net\samples\ordersapi\Consumer\obj\Debug\net8.0\refint\Consumer.dll
+C:\Users\WendyNkosi\OneDrive - OZOW Secure Payment\Desktop\WORK-REPOS\pact-net\samples\ordersapi\Consumer\obj\Debug\net8.0\Consumer.pdb
+C:\Users\WendyNkosi\OneDrive - OZOW Secure Payment\Desktop\WORK-REPOS\pact-net\samples\ordersapi\Consumer\obj\Debug\net8.0\ref\Consumer.dll

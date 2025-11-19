@@ -1,0 +1,179 @@
+dotnet test
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  Provider -> C:\Users\WendyNkosi\OneDrive - OZOW Secure Payment\Desktop\WORK-REPOS\pact-net\samples\ordersapi\Provider\bin\Debug\n
+  et8.0\Provider.dll
+  Provider.Tests -> C:\Users\WendyNkosi\OneDrive - OZOW Secure Payment\Desktop\WORK-REPOS\pact-net\samples\ordersapi\provider.tests
+  \bin\Debug\net8.0\Provider.Tests.dll
+Test run for C:\Users\WendyNkosi\OneDrive - OZOW Secure Payment\Desktop\WORK-REPOS\pact-net\samples\ordersapi\provider.tests\bin\Debug\net8.0\Provider.Tests.dll (.NETCoreApp,Version=v8.0)
+Microsoft (R) Test Execution Command Line Tool Version 17.9.0 (x64)
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+[xUnit.net 00:00:02.20]     Provider.Tests.ProviderTests.VerifyWithPactBroker [FAIL]
+  Failed Provider.Tests.ProviderTests.VerifyWithPactBroker [2 s]
+  Error Message:
+   PactNet.Exceptions.PactVerificationFailedException : Pact verification failed
+  Stack Trace:
+     at PactNet.Verifier.InteropVerifierProvider.Execute()
+   at PactNet.Verifier.PactVerifierSource.Verify()
+   at Provider.Tests.ProviderTests.VerifyWithPactBroker() in C:\Users\WendyNkosi\OneDrive - OZOW Secure Payment\Desktop\WORK-REPOS\pact-net\samples\ordersapi\provider.tests\ProviderTests.cs:line 83
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Standard Output Messages:
+ Starting messaging provider at http://localhost:49152/pact-messages/
+ Messaging provider successfully started
+ Starting verification...
+ Pact verification failed
+
+ Verifier Output
+ ---------------
+ The pact at http://localhost:9292/pacts/provider/Orders%20API/consumer/Fulfilment%20API/pact-version/e8baf5233d628d0cc28403237ca7943c8a2b09a0 is being verified because the pact content belongs to the consumer version matching the following criterion:
+    * latest version of a consumer that has a pact with Orders API (1.0.0)
+
+Verifying a pact between Fulfilment API and Orders API
+
+  a request for an order by ID (64ms loading, 68ms verification)
+     Given an order with ID {id} exists
+      Request Failed - One or more of the setup state change handlers has failed
+
+  a request for an order with an unknown ID (64ms loading, 7ms verification)
+      Request Failed - One or more of the setup state change handlers has failed
+
+  a request to update the status of an order (64ms loading, 6ms verification)
+     Given an order with ID {id} exists
+      Request Failed - One or more of the setup state change handlers has failed
+
+  an event indicating that an order has been created (64ms loading, 6ms verification)
+      Request Failed - One or more of the setup state change handlers has failed
+
+
+Failures:
+
+1) Verifying a pact between Fulfilment API and Orders API Given an order with ID {id} exists - a request for an order by ID - One or more of the setup state change handlers has failed
+
+2) Verifying a pact between Fulfilment API and Orders API - a request for an order with an unknown ID - One or more of the setup state change handlers has failed
+
+3) Verifying a pact between Fulfilment API and Orders API Given an order with ID {id} exists - a request to update the status of an order - One or more of the setup state change handlers has failed
+
+4) Verifying a pact between Fulfilment API and Orders API - an event indicating that an order has been created - One or more of the setup state change handlers has failed
+
+
+There were 4 pact failures
+
+ Verifier Logs
+ -------------
+ 2025-11-18T16:42:06.666262Z DEBUG ThreadId(01) pact_plugin_driver::catalogue_manager: Updated catalogue entries:
+core/content-generator/binary
+core/content-generator/json
+core/content-matcher/json
+core/content-matcher/multipart-form-data
+core/content-matcher/text
+core/content-matcher/xml
+2025-11-18T16:42:06.666433Z DEBUG ThreadId(01) pact_plugin_driver::catalogue_manager: Updated catalogue entries:
+core/matcher/v1-equality
+core/matcher/v2-max-type
+core/matcher/v2-min-type
+core/matcher/v2-minmax-type
+core/matcher/v2-regex
+core/matcher/v2-type
+core/matcher/v3-content-type
+core/matcher/v3-date
+core/matcher/v3-datetime
+core/matcher/v3-decimal-type
+core/matcher/v3-includes
+core/matcher/v3-integer-type
+core/matcher/v3-null
+core/matcher/v3-number-type
+core/matcher/v3-time
+core/matcher/v4-array-contains
+core/matcher/v4-equals-ignore-order
+core/matcher/v4-max-equals-ignore-order
+core/matcher/v4-min-equals-ignore-order
+core/matcher/v4-minmax-equals-ignore-order
+core/matcher/v4-not-empty
+core/matcher/v4-semver
+2025-11-18T16:42:06.670541Z  INFO ThreadId(01) pact_verifier::pact_broker: Fetching path '' from pact broker
+2025-11-18T16:42:06.670578Z DEBUG ThreadId(01) pact_verifier::pact_broker: Final broker URL: http://localhost:9292/
+2025-11-18T16:42:06.670672Z DEBUG ThreadId(01) reqwest::connect: starting new connection: http://localhost:9292/
+2025-11-18T16:42:06.671195Z DEBUG ThreadId(01) hyper_util::client::legacy::connect::http: connecting to [::1]:9292
+2025-11-18T16:42:06.688402Z DEBUG ThreadId(01) hyper_util::client::legacy::connect::http: connected to [::1]:9292
+2025-11-18T16:42:06.692439Z DEBUG ThreadId(01) hyper_util::client::legacy::pool: pooling idle connection for ("http", localhost:9292)
+2025-11-18T16:42:06.692595Z DEBUG ThreadId(01) pact_verifier::pact_broker: Link URL is templated
+2025-11-18T16:42:06.692601Z DEBUG ThreadId(01) pact_verifier::pact_broker: templated URL = http://localhost:9292/pacts/provider/{provider}/for-verification
+2025-11-18T16:42:06.693679Z DEBUG ThreadId(01) pact_verifier::pact_broker: final URL = http://localhost:9292/pacts/provider/Orders%20API/for-verification
+2025-11-18T16:42:06.693711Z  INFO ThreadId(01) pact_verifier::pact_broker: Fetching path '/pacts/provider/Orders%20API/for-verification' from pact broker
+2025-11-18T16:42:06.693715Z DEBUG ThreadId(01) pact_verifier::pact_broker: Final broker URL: http://localhost:9292/pacts/provider/Orders%20API/for-verification
+2025-11-18T16:42:06.693733Z DEBUG ThreadId(01) hyper_util::client::legacy::pool: reuse idle connection for ("http", localhost:9292) 
+2025-11-18T16:42:06.708957Z DEBUG ThreadId(01) hyper_util::client::legacy::pool: pooling idle connection for ("http", localhost:9292)
+2025-11-18T16:42:06.709075Z DEBUG ThreadId(01) pact_verifier::pact_broker: templated URL = http://localhost:9292/pacts/provider/Orders%20API/for-verification
+2025-11-18T16:42:06.709869Z DEBUG ThreadId(01) pact_verifier::pact_broker: final URL = http://localhost:9292/pacts/provider/Orders%20API/for-verification
+2025-11-18T16:42:06.709896Z DEBUG ThreadId(01) pact_verifier::pact_broker: Sending JSON to http://localhost:9292/pacts/provider/Orders%20API/for-verification using POST: {"includePendingStatus":false,"consumerVersionSelectors":[{"latest":true}]}
+2025-11-18T16:42:06.709926Z DEBUG ThreadId(01) hyper_util::client::legacy::pool: reuse idle connection for ("http", localhost:9292) 
+2025-11-18T16:42:06.719822Z DEBUG ThreadId(01) hyper_util::client::legacy::pool: pooling idle connection for ("http", localhost:9292)
+2025-11-18T16:42:06.719957Z  INFO ThreadId(01) pact_verifier::pact_broker: Fetching path '/pacts/provider/Orders%20API/consumer/Fulfilment%20API/pact-version/e8baf5233d628d0cc28403237ca7943c8a2b09a0/metadata/cyU1QiU1RCU1QmwlNUQ9dHJ1ZSZzJTVCJTVEJTVCY3YlNUQ9MTI' from pact broker
+2025-11-18T16:42:06.719966Z DEBUG ThreadId(01) pact_verifier::pact_broker: Final broker URL: http://localhost:9292/pacts/provider/Orders%20API/consumer/Fulfilment%20API/pact-version/e8baf5233d628d0cc28403237ca7943c8a2b09a0/metadata/cyU1QiU1RCU1QmwlNUQ9dHJ1ZSZzJTVCJTVEJTVCY3YlNUQ9MTI
+2025-11-18T16:42:06.719983Z DEBUG ThreadId(01) hyper_util::client::legacy::pool: reuse idle connection for ("http", localhost:9292) 
+2025-11-18T16:42:06.730176Z DEBUG ThreadId(01) hyper_util::client::legacy::pool: pooling idle connection for ("http", localhost:9292)
+2025-11-18T16:42:06.730606Z DEBUG ThreadId(01) verify_interaction{interaction="a request for an order by ID"}: pact_verifier: Verifying interaction V4 Synchronous/HTTP a request for an order by ID (Some("4df4f7e9ec6099de5e7426fea322348713773609"))
+2025-11-18T16:42:06.733828Z DEBUG ThreadId(01) verify_interaction{interaction="a request for an order by ID"}: pact_verifier: Executing provider states
+2025-11-18T16:42:06.733847Z  INFO ThreadId(01) verify_interaction{interaction="a request for an order by ID"}: pact_verifier: Running setup provider state change handler 'an order with ID {id} exists' for 'a request for an order by ID'
+2025-11-18T16:42:06.736670Z DEBUG ThreadId(01) verify_interaction{interaction="a request for an order by ID"}: pact_verifier::provider_client: Sending HTTP Request ( method: POST, path: /, query: None, headers: Some({"Content-Type": ["application/json"]}), body: Present(75 bytes, application/json) ) to state change handler
+2025-11-18T16:42:06.736730Z DEBUG ThreadId(01) verify_interaction{interaction="a request for an order by ID"}: reqwest::connect: starting new connection: http://localhost:6000/
+2025-11-18T16:42:06.737149Z DEBUG ThreadId(01) verify_interaction{interaction="a request for an order by ID"}: hyper_util::client::legacy::connect::http: connecting to [::1]:6000
+2025-11-18T16:42:06.750643Z DEBUG ThreadId(01) verify_interaction{interaction="a request for an order by ID"}: hyper_util::client::legacy::connect::http: connected to [::1]:6000
+2025-11-18T16:42:06.798739Z DEBUG ThreadId(01) verify_interaction{interaction="a request for an order by ID"}: hyper_util::client::legacy::pool: pooling idle connection for ("http", localhost:6000)
+2025-11-18T16:42:06.798784Z DEBUG ThreadId(01) verify_interaction{interaction="a request for an order by ID"}: pact_verifier::provider_client: State change request: Response { url: "http://localhost:6000//provider-states", status: 404, headers: {"content-length": "0", "date": "Tue, 18 Nov 2025 16:42:06 GMT", "server": "Kestrel"} }
+2025-11-18T16:42:06.798827Z DEBUG ThreadId(01) verify_interaction{interaction="a request for an order by ID"}: pact_verifier: State Change: "ProviderState { name: "an order with ID {id} exists", params: {"id": Number(1)} }" -> Err(Provider state failed: (interaction_id: 4df4f7e9ec6099de5e7426fea322348713773609) Invalid status code: 404)
+2025-11-18T16:42:06.798838Z ERROR ThreadId(01) verify_interaction{interaction="a request for an order by ID"}: pact_verifier: Provider setup state change for 'an order with ID {id} exists' has failed - MismatchResult::Error("Invalid status code: 404", Some("4df4f7e9ec6099de5e7426fea322348713773609"))
+2025-11-18T16:42:06.798888Z DEBUG ThreadId(01) verify_interaction{interaction="a request for an order with an unknown ID"}: pact_verifier: Verifying interaction V4 Synchronous/HTTP a request for an order with an unknown ID (Some("350130029b805b67b4a7b38d907ce0156f1eb193"))
+2025-11-18T16:42:06.801752Z DEBUG ThreadId(01) verify_interaction{interaction="a request for an order with an unknown ID"}: pact_verifier: Executing provider states
+2025-11-18T16:42:06.801762Z  INFO ThreadId(01) verify_interaction{interaction="a request for an order with an unknown ID"}: pact_verifier: Running setup provider state change handler with empty state for 'a request for an order with an unknown ID'
+2025-11-18T16:42:06.804323Z DEBUG ThreadId(01) verify_interaction{interaction="a request for an order with an unknown ID"}: pact_verifier::provider_client: Sending HTTP Request ( method: POST, path: /, query: None, headers: Some({"Content-Type": ["application/json"]}), body: Present(41 bytes, application/json) ) to state change handler
+2025-11-18T16:42:06.804370Z DEBUG ThreadId(01) verify_interaction{interaction="a request for an order with an unknown ID"}: reqwest::connect: starting new connection: http://localhost:6000/
+2025-11-18T16:42:06.804842Z DEBUG ThreadId(01) verify_interaction{interaction="a request for an order with an unknown ID"}: hyper_util::client::legacy::connect::http: connecting to [::1]:6000
+2025-11-18T16:42:06.805314Z DEBUG ThreadId(01) verify_interaction{interaction="a request for an order with an unknown ID"}: hyper_util::client::legacy::connect::http: connected to [::1]:6000
+2025-11-18T16:42:06.806474Z DEBUG ThreadId(01) verify_interaction{interaction="a request for an order with an unknown ID"}: hyper_util::client::legacy::pool: pooling idle connection for ("http", localhost:6000)
+2025-11-18T16:42:06.806489Z DEBUG ThreadId(01) verify_interaction{interaction="a request for an order with an unknown ID"}: pact_verifier::provider_client: State change request: Response { url: "http://localhost:6000//provider-states", status: 404, headers: {"content-length": "0", "date": "Tue, 18 Nov 2025 16:42:06 GMT", "server": "Kestrel"} }
+2025-11-18T16:42:06.806505Z DEBUG ThreadId(01) verify_interaction{interaction="a request for an order with an unknown ID"}: pact_verifier: State Change: "ProviderState { name: "", params: {} }" -> Err(Provider state failed: (interaction_id: 350130029b805b67b4a7b38d907ce0156f1eb193) Invalid status code: 404)
+2025-11-18T16:42:06.806509Z ERROR ThreadId(01) verify_interaction{interaction="a request for an order with an unknown ID"}: pact_verifier: Provider setup state change for has failed - MismatchResult::Error("Invalid status code: 404", Some("350130029b805b67b4a7b38d907ce0156f1eb193"))
+2025-11-18T16:42:06.806550Z DEBUG ThreadId(01) verify_interaction{interaction="a request to update the status of an order"}: pact_verifier: Verifying interaction V4 Synchronous/HTTP a request to update the status of an order (Some("0bd7791c1621ac67c4a177cafd0017354536d343"))
+2025-11-18T16:42:06.809005Z DEBUG ThreadId(01) verify_interaction{interaction="a request to update the status of an order"}: pact_verifier: Executing provider states
+2025-11-18T16:42:06.809011Z  INFO ThreadId(01) verify_interaction{interaction="a request to update the status of an order"}: pact_verifier: Running setup provider state change handler 'an order with ID {id} exists' for 'a request to update the status of an order' 
+2025-11-18T16:42:06.811178Z DEBUG ThreadId(01) verify_interaction{interaction="a request to update the status of an order"}: pact_verifier::provider_client: Sending HTTP Request ( method: POST, path: /, query: None, headers: Some({"Content-Type": ["application/json"]}), body: Present(75 bytes, application/json) ) to state change handler
+2025-11-18T16:42:06.811212Z DEBUG ThreadId(01) verify_interaction{interaction="a request to update the status of an order"}: reqwest::connect: starting new connection: http://localhost:6000/
+2025-11-18T16:42:06.811648Z DEBUG ThreadId(01) verify_interaction{interaction="a request to update the status of an order"}: hyper_util::client::legacy::connect::http: connecting to [::1]:6000
+2025-11-18T16:42:06.812029Z DEBUG ThreadId(01) verify_interaction{interaction="a request to update the status of an order"}: hyper_util::client::legacy::connect::http: connected to [::1]:6000
+2025-11-18T16:42:06.812988Z DEBUG ThreadId(01) verify_interaction{interaction="a request to update the status of an order"}: hyper_util::client::legacy::pool: pooling idle connection for ("http", localhost:6000)
+2025-11-18T16:42:06.813006Z DEBUG ThreadId(01) verify_interaction{interaction="a request to update the status of an order"}: pact_verifier::provider_client: State change request: Response { url: "http://localhost:6000//provider-states", status: 404, headers: {"content-length": "0", "date": "Tue, 18 Nov 2025 16:42:06 GMT", "server": "Kestrel"} }
+2025-11-18T16:42:06.813021Z DEBUG ThreadId(01) verify_interaction{interaction="a request to update the status of an order"}: pact_verifier: State Change: "ProviderState { name: "an order with ID {id} exists", params: {"id": Number(1)} }" -> Err(Provider state failed: (interaction_id: 0bd7791c1621ac67c4a177cafd0017354536d343) Invalid status code: 404)
+2025-11-18T16:42:06.813024Z ERROR ThreadId(01) verify_interaction{interaction="a request to update the status of an order"}: pact_verifier: Provider setup state change for 'an order with ID {id} exists' has failed - MismatchResult::Error("Invalid status code: 404", Some("0bd7791c1621ac67c4a177cafd0017354536d343"))
+2025-11-18T16:42:06.813055Z DEBUG ThreadId(01) verify_interaction{interaction="an event indicating that an order has been created"}: pact_verifier: Verifying interaction V4 Asynchronous/Messages an event indicating that an order has been created (Some("a3af0e190e7159879912ecd744a241a3a32ce5b3"))
+2025-11-18T16:42:06.815530Z DEBUG ThreadId(01) verify_interaction{interaction="an event indicating that an order has been created"}: pact_verifier: Executing provider states
+2025-11-18T16:42:06.815534Z  INFO ThreadId(01) verify_interaction{interaction="an event indicating that an order has been created"}: pact_verifier: Running setup provider state change handler with empty state for 'an event indicating that an order has been created'
+2025-11-18T16:42:06.817844Z DEBUG ThreadId(01) verify_interaction{interaction="an event indicating that an order has been created"}: pact_verifier::provider_client: Sending HTTP Request ( method: POST, path: /, query: None, headers: Some({"Content-Type": ["application/json"]}), body: Present(41 bytes, application/json) ) to state change handler
+2025-11-18T16:42:06.817880Z DEBUG ThreadId(01) verify_interaction{interaction="an event indicating that an order has been created"}: reqwest::connect: starting new connection: http://localhost:6000/
+2025-11-18T16:42:06.818365Z DEBUG ThreadId(01) verify_interaction{interaction="an event indicating that an order has been created"}: hyper_util::client::legacy::connect::http: connecting to [::1]:6000
+2025-11-18T16:42:06.818809Z DEBUG ThreadId(01) verify_interaction{interaction="an event indicating that an order has been created"}: hyper_util::client::legacy::connect::http: connected to [::1]:6000
+2025-11-18T16:42:06.819604Z DEBUG ThreadId(01) verify_interaction{interaction="an event indicating that an order has been created"}: hyper_util::client::legacy::pool: pooling idle connection for ("http", localhost:6000)
+2025-11-18T16:42:06.819623Z DEBUG ThreadId(01) verify_interaction{interaction="an event indicating that an order has been created"}: pact_verifier::provider_client: State change request: Response { url: "http://localhost:6000//provider-states", status: 404, headers: {"content-length": "0", "date": "Tue, 18 Nov 2025 16:42:06 GMT", "server": "Kestrel"} }
+2025-11-18T16:42:06.819642Z DEBUG ThreadId(01) verify_interaction{interaction="an event indicating that an order has been created"}: pact_verifier: State Change: "ProviderState { name: "", params: {} }" -> Err(Provider state failed: (interaction_id: a3af0e190e7159879912ecd744a241a3a32ce5b3) Invalid status code: 404)
+2025-11-18T16:42:06.819646Z ERROR ThreadId(01) verify_interaction{interaction="an event indicating that an order has been created"}: pact_verifier: Provider setup state change for has failed - MismatchResult::Error("Invalid status code: 404", Some("a3af0e190e7159879912ecd744a241a3a32ce5b3"))
+2025-11-18T16:42:06.819770Z  WARN ThreadId(01) pact_matching::metrics:
+
+Please note:
+We are tracking events anonymously to gather important usage statistics like Pact version and operating system. To disable tracking, set the 'PACT_DO_NOT_TRACK' environment variable to 'true'.
+
+
+2025-11-18T16:42:06.819793Z DEBUG ThreadId(01) pact_matching::metrics: Sending event to GA - {"ev": "4", "cd2": "unknown", "el": "Pacts verified", "tid": "UA-117778936-1", "cd7": "1.2.10", "t": "event", "cid": "dc76a55ab465eb990348ca171d3c4eef", "av": "5.0.1.0", "v": "1", "cd6": "pact_ffi", "ec": "ProviderTest", "ds": "client", "aid": "pact-net", "aip": "true", "cd3": "windows-x86_64", "ea": "Completed", "an": "pact-net"}
+2025-11-18T16:42:06.822300Z DEBUG ThreadId(01) reqwest::connect: starting new connection: https://www.google-analytics.com/
+2025-11-18T16:42:07.503587Z DEBUG ThreadId(01) hyper_util::client::legacy::connect::http: connecting to 142.251.47.206:443
+2025-11-18T16:42:07.626513Z DEBUG ThreadId(01) hyper_util::client::legacy::connect::http: connected to 142.251.47.206:443
+2025-11-18T16:42:08.139797Z DEBUG ThreadId(01) hyper_util::client::legacy::pool: pooling idle connection for ("https", www.google-analytics.com)
+2025-11-18T16:42:08.139947Z DEBUG ThreadId(01) pact_plugin_driver::plugin_manager: Shutting down all plugins
+
+
+
+
+Failed!  - Failed:     1, Passed:     0, Skipped:     0, Total:     1, Duration: < 1 ms - Provider.Tests.dll (net8.0)
